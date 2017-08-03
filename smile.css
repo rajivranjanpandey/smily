@@ -1,0 +1,88 @@
+body
+{
+	padding:0;
+	margin:0;
+	background-color:black;
+}
+div
+{	
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	border:2px solid yellow;
+	border-radius:50%;
+	width:200px;
+	height:200px;
+}
+.eyes{z-index:1;}
+.eyes:before,
+.eyes:after
+{	
+	content:'';
+	top:30%;
+	position:absolute;
+	background-color:red;
+	border-radius:50%;
+	width:25px;
+	height:25px;
+	transition:.5s;
+	
+}
+.eyes:before{
+	left:25%;
+}
+.eyes:after{
+	right:25%;
+}
+.smily:hover .eyes:before,
+.smily:hover .eyes:after
+{	
+	width:30px;
+	height:40px;
+}
+.cry{z-index:-1;}
+.cry:before,
+.cry:after
+{
+	content:'';
+	top:40%;
+	position:absolute;
+	background-color:blue;
+	width:9px;
+	height:48px;
+	border-bottom-left-radius:50%;
+	border-bottom-right-radius:50%;
+	transition:.4s;
+}
+.cry:before{
+	left:28.5%;
+}
+.cry:after{
+	right:29%;
+}
+.smily:hover .cry:before,
+.smily:hover .cry:after
+{
+	width:0px;
+	height:0px;
+}
+.lips
+{	
+	position:absolute;
+	top:20%;
+	left:50%;
+	transform:translateX(-50%);
+	border:6px solid transparent;
+	border-bottom:6px solid red;
+	width:100px;
+	height:100px;
+	border-radius:0;
+	transition:.5s;
+}
+.smily:hover .lips
+{
+	border-radius:50%;
+	
+	width:130px;
+}
